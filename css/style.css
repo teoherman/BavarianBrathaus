@@ -37,7 +37,7 @@ body p {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
-  margin-bottom: 0;
+  margin-bottom: 0px;
   padding-bottom: 20px;
   background-color: var(--background-color);
   font-family: 'Lato', sans-serif;
@@ -91,7 +91,7 @@ body p {
   margin-right: 0px;
   padding-left: 628px;
   position: absolute;
-  top: 1660px
+  top: 1730px
 }
 
 .content-description {
