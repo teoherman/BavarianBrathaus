@@ -66,6 +66,20 @@
             </div>
           </div> <!-- end content-left -->
 
+          <div class="rating">
+            <h3>Guest Reviews</h3>
+            <p>Please leave us your Review and Comment</p>
+            <input type="button" value="Leave a Review" id="checkoutButton">
+
+            <div class="userReviewSection">
+              <p id="userRating"><p>
+              <p id="userReview"><p>
+
+            </div>
+
+
+          </div>
+
         </div <!-- end body-conent -->
       </div> <!-- end body -->
 
@@ -74,6 +88,30 @@
       </div> <!-- end footer -->
 
     </div><!-- end container -->
+    <script>
 
+
+    var checkoutButton = document.querySelector("#checkoutButton");
+    checkoutButton.addEventListener("click", confirmPurchase);
+
+      function confirmPurchase() {
+        var rating
+        var userReview
+
+          rating = prompt("From 1 to 5, how was your stay?")
+          if (rating <= 3) {
+            userReview = prompt("Tell us how can we improve?")
+            document.getElementById("userRating").innerHTML = "Visitor Rating: " + rating
+            document.getElementById("userReview").innerHTML = "Visitor Review: " + userReview
+          } else {
+            userReview = prompt("Let us know about your great stay!")
+            document.getElementById("userRating").innerHTML = "Visitor Rating: " + rating
+            document.getElementById("userReview").innerHTML = "Visitor Review: " + userReview
+          }
+
+          }
+
+
+    </script>
   </body>
 </html>
