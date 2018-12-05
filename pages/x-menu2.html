@@ -10,22 +10,15 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Playfair+Display:700" rel="stylesheet">
 
     <title>Bavarian Brathaus</title>
-
-    <style>
-
-      </style>
-
   </head>
   <body>
+
     <div class="site-container">
 
       <div class="navigation">
-        <div class="links">
-        <a href="../index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact</a>
-        </div>
+
       </div> <!-- end navigation -->
+
 
       <div class="landing-area">
         <div class="landing-image">
@@ -34,56 +27,15 @@
         </div><!-- end landing img -->
       </div> <!-- end landing area -->
 
-      <div class="content-right">
 
-        <div class="content-overview" style="padding-left: 435px;">
-          <p>These Bavarian specials are perfect for a potluck. They're warm, flavourful, and hearty, so you'll know they are crowd pleasers that are great for serving large groups of people. Your friends and family will be coming back for second helpings of these traditional German dishes.</p>
-        </div> <!-- end content-overview -->
-
-        <div class="content-image-right" >
-          <img src="../img/chef3.png" alt="Chef making recipe">
-        </div>
-
-        <div class="left-content" style="position: absolute; top: 1180px;">
-          <div class="content-description">
-            <h3>Buy Our Chef’s Specials</h3>
-            <p>See our traditional Bavarian recipes made by our chef. Whether you're looking for Oktoberfest favorites or just want that signature Bavarian sausages for your family, our selection of foods will have you asking for more.</p>
-          </div> <!-- end content-description -->
-        </div>
-      </div><!-- end content-right -->
-
-      <div class="content-overview">
-        <p>See our Bavarian recipes that will help you steal the show. They're the centrepieces of the meal for a reason, after all. See the meat filled and bursting with flavour recipes that will make you and your friend savour every single bite and keep you coming back for more.</p>
-      </div> <!-- end content-overview -->
-
-      <div <class="content-left">
-        <div class="content-image-left">
-          <img src="../img/recipe.png" alt="Table and flowers">
-        </div>
-
-      <div class="right-content">
-          <div class="content-description" style="position: absolute; top: 130px;">
-            <h3>Our Famous Recipes</h3>
-            <p>Traditional Bavarian recipes that are quick and easy, so you can have them on the table in no time. Or teach them to the rest of the family, so everyone can appreciate!</p>
-          </div> <!-- end content-description -->
-        </div>
-      </div> <!-- end content-left -->
-
-      <div class="content-overview">
-        <p>“Everything in the kitchen is locally and ethically sourced. Our produce comes fresh every other day to ensure an exceptional experience every day. We specialize in the art of hospitality and make everything with heart and soul, down to the smallest detail.”</p>
-      </div> <!-- end content-overview -->
-
-      <div class="menu-tab">
-        <h3>Menu</h3>
-        <p>See the dishes by our famous chef.</p>
+      <div class="body">
 
         <div class="tab">
-          <button class="tablinks" onclick="openMenu(event, 'Breakfast')">Breakfast</button>
+          <button class="tablinks" onclick="openMenu(event, 'Breakfast Menu')">Breakfast Menu</button>
           <button class="tablinks" onclick="openMenu(event, 'Drinks')">Drinks</button>
-          <!-- <button class="tablinks" onclick="openMenu(event, 'Tokyo')">Tokyo</button> -->
         </div>
 
-        <div id="Breakfast" class="tabcontent">
+        <div id="Breakfast Menu" class="tabcontent">
           <h3>Breakfast Menu</h3>
             <div id="Local Farm Breakfast" class="menublock">
               <h4>Local Farm Breakfast</h4>
@@ -263,57 +215,68 @@
                   <p>Price: $9</p>
                 </div>
             </div>
-          </div>
+        </div>
 
-      </div>
+        <script>
+        function openMenu(evt, menusectionName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(menusectionName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        </script>
+        <div class="body-content">
 
+          <div class="content-overview">
+          </div> <!-- end content-overview -->
 
-</div>
+          <div class="content-right">
+            <div class="content-image-right">
+              <img src="../img/chef2.png" alt="Chef making recipe">
+            </div>
 
-<footer class="footer" style="margin-top: 0px;">
-  <div class="f-description">
-    <h2>Our Repices</h2>
-    <p>4010 Durham-Chapel Hill Blvd, Durham, NC 27707, USA</a>
-    </p>
-  </div>
-  <div class="f-description">
-    <h2>Hours</h2>
-    <p>Monday to Sunday</p>
-    <p>7:00am – 11:00pm</p>
-    <p>Breakfast: 7:00am – 10:30am </p>
-    <p>Brunch: 10:30 - 2:00pm </p>
-    <p>Dinner: 5:00pm – 11:00pm</p>
-  </div>
-  <div class="f-description">
-    <h2>Contact</h2>
-    <p>T: (919) 381-6412 </p>
-    <p>E: contact@bavarianbrathaus.info </p>
-    <p>
-      <i class="fab fa-facebook-square"></i>
-      <i class="fab fa-twitter-square"></i>
-      <i class="fab fa-instagram"></i>
-    </p>
-  </div><!-- end container -->
-</footer>
-
-
-<script>
-function openMenu(evt, menuName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(menuName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-</script>
+            <div class="left-content">
+              <div class="content-description">
+                <h3>Our Story</h3>
+                <p>We started out as two brothers with a love for our Oma (grandmother) Bavarian cooking. Through the years, we collected her recipes and first launched our German sausage food truck in 2006. Fast forward twelve years and we have Bavarian Brathaus running for over eight years</p>
+              </div> <!-- end content-description -->
+            </div>
+          </div><!-- end content-right -->
 
 
+            <div class="content-overview">
+              <p>“Everything in the kitchen is locally and ethically sourced. Our produce comes fresh every other day to ensure an exceptional experience every day. We specialize in the art of hospitality and make everything with heart and soul, down to the smallest detail.”</p>
+            </div> <!-- end content-overview -->
 
 
+          <div <class="content-left">
+            <div class="content-image-left">
+              <img src="../img/atmosphere.png" alt="Table and flowers">
+            </div>
+
+          <div class="right-content">
+              <div class="content-description">
+                <h3>The Atmosphere</h3>
+                <p>Think Oma’s kitchen with a modern flair. We’ve got the wood oven burning—perfect for those chilly nights and our diverse wine collection is nothing short of a good time. All 19 of our real draft beers will take you to a different part of Germany with each sip. Try them all out with our sample platters! Our dining room is relaxed and warm, but chic. Dress casual for the after work drink with friends, or up for the family dinner party.</p>
+              </div> <!-- end content-description -->
+            </div>
+          </div> <!-- end content-left -->
+
+        </div <!-- end body-conent -->
+      </div> <!-- end body -->
+
+      <div class="footer">
+
+      </div> <!-- end footer -->
+
+    </div><!-- end container -->
+
+  </body>
 </html>
